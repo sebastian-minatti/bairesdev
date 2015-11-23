@@ -40,7 +40,7 @@
 												${category.description}
 											</td>
 		    								<td>
-		    									<g:set var="map" value="[id: category.id]" />	
+		    									<g:set var="map" value="[id: category.name]" />	
 		    									<a href="${createLink(action: 'edit', params: map)}"><span class="glyphicon glyphicon-edit"></span> Edit</a>
 		    									<a href="${createLink(action: 'delete', params: map)}"><span class="glyphicon glyphicon-trash"></span> Delete</a>
 		    								</td>											

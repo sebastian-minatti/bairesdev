@@ -27,6 +27,7 @@ class ProductController {
 	
 	@Transactional
 	def update(Product productInstance) {
+		System.out.println("el valor es" + productInstance)
 		productInstance.save flush:true
 		redirect(action: "index")
 	}

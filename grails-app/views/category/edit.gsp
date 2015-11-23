@@ -52,7 +52,7 @@
 									<div class="row">
 										<div class="col-lg-12">
 											<p class="navbar-btn">
-												<g:actionSubmit class="btn btn-primary" action="update"
+												<g:actionSubmit class="btn btn-primary" action="save"
 													value="Save" />
 												<a href="${createLink(action: 'index')}" class="btn btn-primary">Cancel</a>
 											</p>

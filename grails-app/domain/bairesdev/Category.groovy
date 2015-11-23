@@ -10,6 +10,7 @@ class Category {
     }
 	
 	static mapping = {
-		version false;
+		version false
+		id generator:'assigned', name:'name'
 	}
 }

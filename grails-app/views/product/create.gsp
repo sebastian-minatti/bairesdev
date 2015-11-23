@@ -67,8 +67,8 @@
 														code="product.categories.label" default="Categories" />
 												</label>
 												<g:select name="categories" from="${Category.list()}"
-													multiple="multiple" optionKey="id" size="5" optionValue="${{it.name}}"
-													value="${product?.categories*.id}" />
+													multiple="multiple" optionKey="name" size="5" optionValue="${{it.name}}"
+													value="${product?.categories*.name}" />
 											</div>
 										</div>
 										<!-- Currency -->
