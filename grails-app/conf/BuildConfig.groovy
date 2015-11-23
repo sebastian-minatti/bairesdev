@@ -34,12 +34,13 @@ grails.project.dependency.resolution = {
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
-
+		
+		grailsCentral()
+		mavenLocal()
+		mavenCentral()
         grailsPlugins()
         grailsHome()
-        mavenLocal()
-        grailsCentral()
-        mavenCentral()
+        
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -51,6 +52,7 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
+		compile "org.freemarker:freemarker:2.3.20"
     }
 
     plugins {
@@ -62,7 +64,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.8'
         compile ":asset-pipeline:1.9.9"
 		compile ":twitter-bootstrap:3.2.1"
-
+		
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
         runtime ":database-migration:1.4.0"
@@ -74,4 +76,6 @@ grails.project.dependency.resolution = {
         //compile ":coffee-asset-pipeline:1.8.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
+	
+	//grails.project.work.dir = '.grails'
 }

@@ -1,6 +1,7 @@
 import bairesdev.Product
 import bairesdev.Category
 import bairesdev.Currency
+import bairesdev.Supplier
 
 class BootStrap {
 
@@ -14,7 +15,11 @@ class BootStrap {
 			new Product(code: "LG122", description: "cellphone", price:7120.55, currency: Currency.DOLLAR).save(failOnError: true)
 			new Product(code: "LG123", description: "cellphone", price:7121.55, currency: Currency.DOLLAR).save(failOnError: true)
 			new Product(code: "LG124", description: "cellphone", price:7122.55, currency: Currency.DOLLAR).save(failOnError: true)
-		}		
+		}	
+		if (!Supplier.count()) {
+			new Supplier(code: "Samsung", description: "smartphones" ).save(failOnError: true)
+			new Supplier(code: "Sony", description: "pcs" ).save(failOnError: true)
+		}
     }
     def destroy = {
     }

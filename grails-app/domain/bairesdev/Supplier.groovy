@@ -1,8 +1,11 @@
 package bairesdev
 
+import grails.rest.Resource
+
+@Resource(uri='/suppliers', formats=['json', 'xml'])
 class Supplier {
 
-	int code
+	String code
 	String description
 	
     static constraints = {

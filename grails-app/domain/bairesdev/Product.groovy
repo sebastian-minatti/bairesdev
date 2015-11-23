@@ -17,7 +17,6 @@ class Product {
 		description blank: false, nullable:false
 		price(matches: '^\\d{0,8}(\\.\\d{1,4})?$')
 		stock(matches: '^\\d')
-		supplier nullable:true
     }
 	static mapping = {
 		version false
